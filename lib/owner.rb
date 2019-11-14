@@ -45,7 +45,7 @@ class Owner
      Cat.new(name,self)
   end 
   
-  def walk_dog 
+  def walk_dogs 
     self.dogs.each {|d| d.mood= "happy"} 
   end 
   
