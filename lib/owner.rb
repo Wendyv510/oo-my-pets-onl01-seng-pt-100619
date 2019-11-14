@@ -64,7 +64,8 @@ class Owner
   end 
   
   def list_pets 
-    " #{self.dogs} #{self.cats}"
+    Cat.all.select {|c| c.owner == self}
+    Dog.all.select {|d| d.owner == self}
     #self.cats.select {|c| c.owner}
     #self.dogs.select {|d| d.owner}
   end 
