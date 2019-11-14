@@ -64,11 +64,7 @@ class Owner
   end 
   
   def list_pets 
-    num_dogs = self.dogs.size 
-    num_cats = self.cats.size 
-    " I have #{num_dogs} and #{num_cats}." 
-    #self.cats.select {|c| c.owner}
-    #self.dogs.select {|d| d.owner}
+    
   end 
   
   def self.count 
