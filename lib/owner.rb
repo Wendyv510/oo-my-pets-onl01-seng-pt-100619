@@ -27,8 +27,8 @@ class Owner
   end 
   
   def dogs 
-    Dog.all.select do |dog,owner| 
-      dog.owner == self
+    Dog.all.select do |d| 
+      d.owner == self
     end 
   end 
   
@@ -42,11 +42,11 @@ class Owner
   end 
   
   def self.buy_cat(name)
-     Cat.new(name,owner)
+     Cat.new(name,self)
   end 
   
   def walk_dog 
-    Dog.mood = "happy" 
+    self.dogs.each {|d| d.mood = "happy"} 
   end 
   
   def feed_cats 
