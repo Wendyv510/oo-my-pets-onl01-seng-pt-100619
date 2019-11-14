@@ -64,8 +64,8 @@ class Owner
   end 
   
   def list_pets 
-    self.cats
-    self.dogs 
+    self.cats.select {|c| c.owner}
+    self.dogs.select {|d| d.owner}
   end 
   
   def self.count 
